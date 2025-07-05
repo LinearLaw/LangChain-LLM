@@ -6,7 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="LangChain-LLM" />
+        <module name="langchain4j-01-multi-model" />
       </profile>
     </annotationProcessing>
   </component>
