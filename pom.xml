@@ -11,6 +11,7 @@
     <name>LangChain4j-Parent</name>
     <modules>
         <module>langchain4j-01-multi-model</module>
+        <module>langchain4j-02-image</module>
     </modules>
 
     <properties>
