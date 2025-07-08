@@ -1,5 +1,6 @@
 package com.linear.langchain.config;
 
+import com.linear.langchain.listener.ChatListener;
 import com.linear.langchain.service.ChatAssistant;
 import dev.langchain4j.model.chat.ChatModel;
 import dev.langchain4j.model.openai.OpenAiChatModel;
@@ -9,6 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import java.time.Duration;
+import java.util.List;
 
 @Configuration
 public class LLMConfig {
@@ -23,6 +25,7 @@ public class LLMConfig {
                 .logResponses(true)
                 .maxRetries(2)
                 .timeout(Duration.ofSeconds(60))
+                .listeners(List.of(new ChatListener()))
                 .build();
     }
 
