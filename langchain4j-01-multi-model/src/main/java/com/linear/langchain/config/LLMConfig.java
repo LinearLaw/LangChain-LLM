@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.time.Duration;
+
 @Configuration
 public class LLMConfig {
 
@@ -17,6 +19,10 @@ public class LLMConfig {
                 .apiKey(System.getenv("ALI_API_KEY"))
                 .modelName("qwen-plus")
                 .baseUrl("https://dashscope.aliyuncs.com/compatible-mode/v1")
+                .logRequests(true)
+                .logResponses(true)
+                .maxRetries(2)
+                .timeout(Duration.ofSeconds(60))
                 .build();
     }
 
@@ -26,6 +32,10 @@ public class LLMConfig {
                 .apiKey(System.getenv("ALI_API_KEY"))
                 .modelName("deepseek-r1")
                 .baseUrl("https://dashscope.aliyuncs.com/compatible-mode/v1")
+                .logRequests(true)
+                .logResponses(true)
+                .maxRetries(2)
+                .timeout(Duration.ofSeconds(60))
                 .build();
     }
 
