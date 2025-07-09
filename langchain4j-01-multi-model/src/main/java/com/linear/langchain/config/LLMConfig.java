@@ -42,6 +42,20 @@ public class LLMConfig {
                 .build();
     }
 
+    @Bean(name = "llama")
+    public ChatModel chatModelLlama(){
+        return OpenAiChatModel.builder()
+                .apiKey(System.getenv("ALI_API_KEY"))
+                .modelName("llama-4-maverick-17b-128e-instruct")
+                .baseUrl("https://dashscope.aliyuncs.com/compatible-mode/v1")
+                .logRequests(true)
+                .logResponses(true)
+                .maxRetries(2)
+                .timeout(Duration.ofSeconds(60))
+                .listeners(List.of(new ChatListener()))
+                .build();
+    }
+
     /**
      * High Level API 需要用AiService.create创建
      */

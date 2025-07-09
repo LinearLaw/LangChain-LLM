@@ -8,6 +8,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="langchain4j-01-multi-model" />
+        <module name="langchain4j-02-image" />
       </profile>
     </annotationProcessing>
   </component>
