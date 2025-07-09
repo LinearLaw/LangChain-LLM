@@ -1,6 +1,7 @@
 package com.linear.langchain.config;
 
 import com.linear.langchain.listener.ChatListener;
+import dev.langchain4j.community.model.dashscope.WanxImageModel;
 import dev.langchain4j.model.chat.ChatModel;
 import dev.langchain4j.model.openai.OpenAiChatModel;
 import org.springframework.context.annotation.Bean;
@@ -14,6 +15,7 @@ public class LLMConfig {
 
     /**
      * 指定多模态模型 - 老贵了一次几毛钱
+     * 读取图片，分析图片
      */
     @Bean(name = "qwen-vl-max")
     public ChatModel imageModel(){
@@ -23,6 +25,17 @@ public class LLMConfig {
                 .baseUrl("https://dashscope.aliyuncs.com/compatible-mode/v1")
                 .logRequests(true)
                 .logResponses(true)
+                .build();
+    }
+
+    /**
+     * 文生图大模型 - 老贵了一次几毛钱
+     */
+    @Bean
+    public WanxImageModel wanxImageModel(){
+        return WanxImageModel.builder()
+                .apiKey(System.getenv("ALI_API_KEY"))
+                .modelName("wanx2.1-t2i-turbo")
                 .build();
     }
 

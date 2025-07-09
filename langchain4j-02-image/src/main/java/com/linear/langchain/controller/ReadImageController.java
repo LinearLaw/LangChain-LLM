@@ -15,7 +15,7 @@ import java.io.IOException;
 import java.util.Base64;
 
 @RestController
-@RequestMapping("image")
+@RequestMapping("image/read")
 public class ReadImageController {
 
     @jakarta.annotation.Resource(name = "qwen-vl-max")
@@ -26,9 +26,9 @@ public class ReadImageController {
 
     /**
      * 利用LLM的多模态，分析图片，输出结果
-     * http://localhost:8080/image/read
+     * http://localhost:8080/image/read/doRead
      */
-    @GetMapping("/read")
+    @GetMapping("/doRead")
     public String readImage(){
         String result = "读取图片MeiTuan-03690-20250709.png";
 
