@@ -5,6 +5,8 @@
     <file url="file://$PROJECT_DIR$/langchain4j-01-multi-model/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/langchain4j-02-image/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/langchain4j-02-image/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/langchain4j-03-stream/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/langchain4j-03-stream/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>

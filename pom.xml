@@ -12,6 +12,7 @@
     <modules>
         <module>langchain4j-01-multi-model</module>
         <module>langchain4j-02-image</module>
+        <module>langchain4j-03-stream</module>
     </modules>
 
     <properties>
