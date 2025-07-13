@@ -47,10 +47,12 @@
             <optional>true</optional>
         </dependency>
 
-        <!-- stream -> reactor-->
+        <!-- spring-boot-starter-data-redis
+            https://docs.langchain4j.dev/tutorials/chat-memory#persistence
+        -->
         <dependency>
-            <groupId>dev.langchain4j</groupId>
-            <artifactId>langchain4j-reactor</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
         </dependency>
 
         <!--test-->
