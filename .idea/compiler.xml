@@ -7,9 +7,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="langchain4j-04-memory-prompt" />
+        <module name="langchain4j-02-image" />
         <module name="langchain4j-03-stream" />
         <module name="langchain4j-01-multi-model" />
-        <module name="langchain4j-02-image" />
       </profile>
     </annotationProcessing>
   </component>
