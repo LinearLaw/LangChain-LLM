@@ -12,6 +12,7 @@
         <module name="langchain4j-02-image" />
         <module name="langchain4j-03-stream" />
         <module name="langchain4j-01-multi-model" />
+        <module name="langchain4j-06-embedding" />
       </profile>
     </annotationProcessing>
   </component>

@@ -15,6 +15,7 @@
         <module>langchain4j-03-stream</module>
         <module>langchain4j-04-memory-prompt</module>
         <module>langchain4j-05-function-calling</module>
+        <module>langchain4j-06-embedding</module>
     </modules>
 
     <properties>
@@ -46,6 +47,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
             <!-- Spring AI -->
             <dependency>
                 <groupId>org.springframework.ai</groupId>
