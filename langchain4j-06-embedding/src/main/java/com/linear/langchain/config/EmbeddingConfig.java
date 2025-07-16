@@ -13,6 +13,9 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class EmbeddingConfig {
 
+    /**
+     * 定义embedding模型，用来将文本转成向量
+     */
     @Bean
     public EmbeddingModel embeddingModel(){
         return OpenAiEmbeddingModel.builder()
@@ -22,13 +25,22 @@ public class EmbeddingConfig {
                 .build();
     }
 
+    /**
+     * 直接使用client定义qdrant
+     */
     @Bean
     public QdrantClient qdrantClient(){
-        QdrantGrpcClient.Builder builder = QdrantGrpcClient.newBuilder("127.0.0.1", 6334, false);
-
+        QdrantGrpcClient.Builder builder = QdrantGrpcClient.newBuilder(
+                "127.0.0.1",
+                6334,
+                false);
         return new QdrantClient(builder.build());
     }
 
+    /**
+     * 借助langchain4j的工具定义qdrant连接
+     */
+    @Bean
     public EmbeddingStore<TextSegment> embeddingStore(){
         return QdrantEmbeddingStore.builder()
                 .host("127.0.0.1")
