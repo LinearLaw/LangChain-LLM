@@ -16,6 +16,7 @@
         <module>langchain4j-04-memory-prompt</module>
         <module>langchain4j-05-function-calling</module>
         <module>langchain4j-06-embedding</module>
+        <module>langchain4j-07-RAG</module>
     </modules>
 
     <properties>
